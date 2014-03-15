@@ -1,0 +1,22 @@
+See the comment in ydcv.el.
+
+* 简介
+ydcv.el借鉴了sdcv.el，可以帮助我们在emacs中方便的使用有道字典（python命令行版本，具体可以google之）
+
+* 安装
+1. 安装ydcv
+2. 将ydcv.el放置入load-path的某目录中
+3. 在emacs配置文件中添加
+   (require 'ydcv)
+
+* 使用
+主要提供了以下查询字典的接口
+1. ydcv-search-word
+   查询给定单词，并将结果显示在buffer中
+2. ydcv-show-buffer
+   查询鼠标所在的单词或当前选中的区域，并将结果显示在buffer中
+3. ydcv-show-popup
+   查询鼠标所在的单词或当前选中的区域，并将结果显示在popup中（依赖于auto-complete的popup.el）
+
+
+此外，在显示ydcv结果的buffer中提供了一些快捷功能，可以按 ? 查看
