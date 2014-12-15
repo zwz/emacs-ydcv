@@ -34,7 +34,7 @@
 ;; `ydcv-show-popup'
 ;; Search around word and display with popup.
 ;; `ydcv-show-buffer'
-;; Search around word and display with buffer,.
+;; Search around word and display with buffer.
 ;; `ydcv-search-word'
 ;; Search input word and display with buffer.
 ;;
@@ -69,7 +69,7 @@
   :group 'ydcv)
 
 (defcustom ydcv-program-name "ydcv"
-  "The name of the buffer of ydcv."
+  "The name of the ydcv program."
   :type 'string
   :group 'ydcv)
 
@@ -210,7 +210,7 @@ the beginning of the buffer."
     (message "YDCV has search finished with `%s'." ydcv-current-translate-object)))
 
 (defun ydcv-prompt-input ()
-  "Prompt input object for translate."
+  "Prompt input object for translation."
   (read-string (format "Word (%s): " (or (ydcv-region-or-word) ""))
                nil nil
                (ydcv-region-or-word)))
