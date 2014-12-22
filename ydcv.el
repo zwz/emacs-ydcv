@@ -222,7 +222,7 @@ Otherwise return word around point."
                                       (region-end))
     (thing-at-point 'word)))
 
-
+;;;###autoload
 (defun ydcv-search-word ()
   "Prompt for input WORD.
 And show translation in other buffer."
@@ -235,6 +235,7 @@ And show translation in other buffer."
       (ydcv-goto-ydcv)
       (ydcv-mode-reinit))))
 
+;;;###autoload
 (defun ydcv-show-buffer (&optional word)
   "Translate current WORD.
 And show information in other buffer."
@@ -247,6 +248,7 @@ And show information in other buffer."
     (ydcv-goto-ydcv)
     (ydcv-mode-reinit)))
 
+;;;###autoload
 (defun ydcv-show-popup (&optional word)
   "Translate current WORD.
 And show information in popup."
