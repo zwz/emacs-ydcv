@@ -163,8 +163,6 @@ Turning on Text mode runs the normal hook `ydcv-mode-hook'."
                                               (car (find-coding-systems-string string)));buffer-file-coding-system)
                                               'utf-8)))
 
-
-
 (defun ydcv-search (word simple)
   "Search some WORD."
   (setq word (ydcv-encoding-string word))
