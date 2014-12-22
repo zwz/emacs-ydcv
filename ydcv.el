@@ -61,7 +61,7 @@
 
 (defgroup ydcv nil
   "Interface for ydcv (有道词典 console version)."
-  :group 'edit)
+  :group 'processes)
 
 (defcustom ydcv-buffer-name "*YDCV*"
   "The name of the buffer of ydcv."
