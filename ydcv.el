@@ -61,7 +61,7 @@
 
 (defgroup ydcv nil
   "Interface for ydcv (有道词典 console version)."
-  :group 'edit)
+  :group 'processes)
 
 (defcustom ydcv-buffer-name "*YDCV*"
   "The name of the buffer of ydcv."
@@ -163,8 +163,6 @@ Turning on Text mode runs the normal hook `ydcv-mode-hook'."
                                               (car (find-coding-systems-string string)));buffer-file-coding-system)
                                               'utf-8)))
 
-
-
 (defun ydcv-search (word simple)
   "Search some WORD."
   (setq word (ydcv-encoding-string word))
@@ -224,7 +222,7 @@ Otherwise return word around point."
                                       (region-end))
     (thing-at-point 'word)))
 
-
+;;;###autoload
 (defun ydcv-search-word ()
   "Prompt for input WORD.
 And show translation in other buffer."
@@ -237,6 +235,7 @@ And show translation in other buffer."
       (ydcv-goto-ydcv)
       (ydcv-mode-reinit))))
 
+;;;###autoload
 (defun ydcv-show-buffer (&optional word)
   "Translate current WORD.
 And show information in other buffer."
@@ -249,6 +248,7 @@ And show information in other buffer."
     (ydcv-goto-ydcv)
     (ydcv-mode-reinit)))
 
+;;;###autoload
 (defun ydcv-show-popup (&optional word)
   "Translate current WORD.
 And show information in popup."
